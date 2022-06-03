@@ -1,0 +1,23 @@
+<launch>
+    <arg name="config_path" default = "/home/zlc/cpl-tmp_ws/src/PL-VINS/config/euroc/lifelong_config.yaml" />
+    <arg name="vins_path" default = "/home/zlc/cpl-tmp_ws/src/PL-VINS/" />
+
+    <node name="rvizvisualisation" pkg="rviz" type="rviz" output="log" args="-d $(find plvins_estimator)/../config/vins_rviz_config.rviz" />
+
+
+<!--   <node name="feature_tracker" pkg="feature_tracker" type="feature_tracker" output="screen"> -->
+<!--            <param name="config_file" type="string" value="$(arg config_path)" /> -->
+<!--            <param name="vins_folder" type="string" value="$(arg vins_path)" /> -->
+<!--            </node> -->
+
+    <node name="linefeature_tracker" pkg="feature_tracker" type="LineFeature_tracker" output="log">
+        <param name="config_file" type="string" value="$(arg config_path)" />
+        <param name="vins_folder" type="string" value="$(arg vins_path)" />
+    </node>
+
+
+
+    <node name="image_node_b" pkg="image_node_b" type="image_node_b" output="log">
+    </node>
+</launch>
+

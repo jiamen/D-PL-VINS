@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find vins_estimator)/launch/euroc.launch" />
+    <include file="$(find vins_estimator)/launch/vins_rviz.launch"/>
+</launch>
