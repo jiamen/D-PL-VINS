@@ -91,7 +91,7 @@ int main(int argc, char **argv)
 {
     // m_camera = camodocal::CameraFactory::instance()->generateCameraFromYamlFile("/home/zlc/ctest_ws/src/PL-VINS/config/euroc/euroc_config_fix_extrinsic.yaml");
     // m_camera = camodocal::CameraFactory::instance()->generateCameraFromYamlFile("/home/zlc/cpl-tmp_ws/src/PL-VINS/config/euroc/loop.yaml");
-    m_camera = camodocal::CameraFactory::instance()->generateCameraFromYamlFile("/home/zlc/cpl-tmp_ws/src/PL-VINS/config/euroc/realsense_color_config.yaml");
+    m_camera = camodocal::CameraFactory::instance()->generateCameraFromYamlFile("/home/zlc/c_myvins/src/D-PL-VINS/config/euroc/realsense_color_config.yaml");
     // m_camera = camodocal::CameraFactory::instance()->generateCameraFromYamlFile("/home/zlc/cpl-tmp_ws/src/PL-VINS/config/euroc/lifelong_config.yaml");
     K_ = m_camera->initUndistortRectifyMap(undist_map1_,undist_map2_);
 
